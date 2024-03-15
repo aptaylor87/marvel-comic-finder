@@ -18,6 +18,20 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 
+
+/** Search results.
+ *
+ *Routed at comics/search/:charOneId/:charTwoId/:offset
+ * 
+ * Uses params set from search page to request comics through the marvel API.
+ * 
+ * Results are shown with links to add specific comics to readinglist. A check is run to render different options if the comic is already in a user's reading list.
+ * Or if the user isn't logged in. 
+ * 
+ * Links at bottom of page display to guide to paginated results, updating the offset param to show the next set of results. 
+ * 
+ */
+
 function SearchResults() {
   const {charOneId, charTwoId, offset} = useParams();
 

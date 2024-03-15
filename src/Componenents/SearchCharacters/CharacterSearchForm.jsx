@@ -11,6 +11,16 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 
+
+/** Search widget.
+ *
+ * Appears on Search within character boxes. Runs an Autocomplete that 
+ *
+ * This form just sets the search characters in state, which updates the character box to show a character card instead. 
+ *
+ * { Search } -> CharacterSearchForm
+ */
+
 function CharacterSearchForm( { options,  setChar } ) {
 
     const [selectedCharacter, setSelectedCharacter] = useState(null);

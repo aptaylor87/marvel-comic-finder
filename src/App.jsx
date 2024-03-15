@@ -30,6 +30,7 @@ export const TOKEN_STORAGE_ID = "marvel-token";
 function App() {
 
   const [currentUser, setCurrentUser] = useState(null);
+  const [readingListIds, setReadingListIds] = useState([])
   const [token, setToken] = useLocalStorage(TOKEN_STORAGE_ID);
 
   // Load user info from API. Until a user is logged in and they have a token,
@@ -46,6 +47,7 @@ function App() {
           // put the token on the Api class so it can use it to call the API.
           BackendAPI.token = token;
           let currentUser = await BackendAPI.getCurrentUser(username);
+          setReadingListIds(currentUser.comics)
           setCurrentUser(currentUser);
           // setApplicationIds(new Set(currentUser.applications));
         } catch (err) {
@@ -98,7 +100,7 @@ function App() {
   return (
     <Container>
       <UserContext.Provider
-        value={{ currentUser, setCurrentUser}}>
+        value={{ currentUser, setCurrentUser, readingListIds, setReadingListIds}}>
         <NavBar logout={ logout } />
         <MarvelRoutes signup={signup} login={login}> </MarvelRoutes>
       </UserContext.Provider>

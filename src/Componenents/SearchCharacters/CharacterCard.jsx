@@ -15,6 +15,16 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 
+/** Character cards.
+ *
+ *
+ * After completing the character search form, the chosen character is set in state which renders this card, replacing the form.
+ * 
+ * Displays a button to remove the character from state. 
+ * 
+ * { Search } -> Charactercards
+ */
+
 function CharacterCard({options, character, setChar, characters}) {
 
     function removeChar() {
@@ -26,7 +36,7 @@ function CharacterCard({options, character, setChar, characters}) {
 
   function showCard(cardcharacter, characteroptions) {
     if (!characteroptions) {
-        return null; // or handle the null case as needed
+        return null;
       }
 
     let thischar = characteroptions.find(char => char['id'] === cardcharacter)

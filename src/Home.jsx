@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-
 /** Homepage of site.
  *
  * Shows welcome message or login/register buttons.
@@ -15,7 +14,6 @@ import Button from "@mui/material/Button";
  *
  * Routes -> Homepage
  */
-
 
 function Home() {
   const {currentUser} = useContext(UserContext);

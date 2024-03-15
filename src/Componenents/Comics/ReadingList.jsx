@@ -19,6 +19,19 @@ import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 import {CircularProgress} from "@mui/material";
 
+
+/**Reading List.
+ *
+ * Routed at /readinglist
+ * 
+ * Gets a list of the comics on the current user's reading list through the backend API.
+ * 
+ * Renders ComicsList and Comic Card to generate the list. 
+ * 
+ * 
+ * 
+ */
+
 function ReadingList() {
     const [comics, setComics] = useState(null);
     const { currentUser } = useContext(UserContext);

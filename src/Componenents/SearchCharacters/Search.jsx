@@ -12,9 +12,21 @@ import TextField from "@mui/material/TextField";
 import CharacterCard from "./CharacterCard";
 import Button from "@mui/material/Button";
 
+/** Shows search page, with two boxes to select characters and then run a search for comics. .
+ *
+ * On mount, loads characters from API.
+ *
+ * This is routed to at /search
+ *
+ * Routes -> { SearchResults }
+ */
+
 function Search() {
+
   const [characters, setCharacters] = useState(null);
   const [options, setOptions] = useState(null);
+
+  // Used in the button that appears once the two characters are chosen. 
   const [searchCharOne, setSearchCharOne] = useState(null)
   const [searchCharTwo, setSearchCharTwo] = useState(null)
 

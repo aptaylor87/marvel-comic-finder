@@ -24,7 +24,7 @@ See the deployed application [here](**fix**)
 
 ### Backend
 
-Backend can be viewed [here](https://github.com/aptaylor87/react-jobly-backend)
+Backend can be viewed [here](https://github.com/aptaylor87/capstone2)
 
 
 ## Contributing

@@ -15,6 +15,16 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 
+/**Comic List
+ *
+ * Routed at /readinglist and Search Results
+ * 
+ * Takes a list of comics from parent routes and renders comic cards for each. 
+ * 
+ * 
+ */
+
+
 function ComicsList({ comics }) {
     if (!comics) {
         return null; // or display a loading indicator or message
