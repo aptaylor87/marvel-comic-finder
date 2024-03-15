@@ -15,7 +15,7 @@ import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 
 function ComicCard({id, name, description, imageURL, imageType}) {
-  const image = `${imageURL}/landscape_medium.${imageType}`;
+  const image = `${imageURL}/portrait_xlarge.${imageType}`;
   const {currentUser, readingListIds, setReadingListIds} =
     useContext(UserContext);
   function buttons() {
@@ -58,7 +58,7 @@ function ComicCard({id, name, description, imageURL, imageType}) {
       }}
     >
       <Card sx={{maxWidth: 345}}>
-        <CardMedia sx={{height: 200}} image={image} title={name} />
+        <CardMedia sx={{height: 450}} image={image} title={name} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {name}

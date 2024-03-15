@@ -30,7 +30,7 @@ function Home() {
     >
       <Typography variant="h3" marginBottom="20px">Marvel Comic Finder</Typography> {/* Added marginBottom */}
       <Typography variant="body1" marginBottom="20px"> {/* Added marginBottom */}
-        Welcome! Navigate to the search function in the upper navigation to see
+        Welcome! Check out to the search function in the upper navigation to see
         what this application is all about. You'll be able to pick two
         characters from Marvel comics and see a list of all comics featuring
         both. Create an account to add comics to your own reading list.
