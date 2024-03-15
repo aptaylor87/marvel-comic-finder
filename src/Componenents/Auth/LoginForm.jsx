@@ -44,7 +44,7 @@ function LoginForm({login}) {
     // Handle form submission here
     let result = await login(formData);
     if (result.success) {
-      navigate("/", {replace: true});
+      navigate("/search", {replace: true});
     } else {
       setFormErrors(result.errors);
     }

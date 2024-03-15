@@ -3,6 +3,8 @@ import {useState, useEffect} from "react";
 import NavBar from "./Routing/NavBar";
 import MarvelRoutes from "./Routing/MarvelRoutes";
 import BackendAPI from "./api";
+import { appTheme } from "./themes/theme";
+import { ThemeProvider } from "@emotion/react";
 
 import UserContext from "./Componenents/Auth/UserContext";
 import {jwtDecode} from "jwt-decode";
@@ -99,11 +101,13 @@ function App() {
 
   return (
     <Container>
+      <ThemeProvider theme={appTheme}>
       <UserContext.Provider
         value={{ currentUser, setCurrentUser, readingListIds, setReadingListIds}}>
         <NavBar logout={ logout } />
         <MarvelRoutes signup={signup} login={login}> </MarvelRoutes>
       </UserContext.Provider>
+    </ThemeProvider>
     </Container>
   );
 }

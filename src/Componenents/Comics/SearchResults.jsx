@@ -64,7 +64,7 @@ function SearchResults() {
     return (
         <Link to={forwardLink}>
           <Button type="submit" variant="contained">
-            Forward
+            Next 
           </Button>
         </Link>
     )
@@ -81,8 +81,14 @@ function SearchResults() {
   return (
     <>
       <ComicsList comics={comics} />
-      {offset > 0 ? showPrevButton() : null}
-      {showForwardButton()}
+      <Box
+        display="flex"
+        justifyContent="center"
+        marginTop="20px"
+      >
+        {offset > 0 ? showPrevButton() : null}
+        {showForwardButton()}
+      </Box>
     </>
   );
 }

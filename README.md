@@ -11,7 +11,7 @@ Some additional features inlude:
 -Account creation.
 -Use of Material-UI for styling.
 
-See the deployed application [here](**fix**)
+See the deployed application [here](https://marvel-comic-finder.onrender.com/)
 
 ## Technologies Used
 

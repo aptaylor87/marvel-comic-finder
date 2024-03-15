@@ -45,39 +45,30 @@ function CharacterCard({options, character, setChar, characters}) {
     let charImage = `${thischar.imageURL}/landscape_medium.${thischar.imageType}`
     let charDescription = thischar.description
     return (
-        <Box
+      <Box
         display="flex"
         flexDirection="column"
         alignItems="center"
         margin="auto"
-        marginTop="15px"
-        minWidth="70%" 
-          
-          sx={{
-            '& .MuiTextField-root': { m: 1, width: '25ch' },
-          }}
-          
-        >
-      <Card sx={{maxWidth: 345}}>
-        <CardMedia
-          sx={{height: 200}}
-          image={charImage}
-          title="lizard"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-          {charName}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {charDescription}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small" onClick={removeChar}>Change</Button>
-          
-        </CardActions>
-      </Card>
-
+        marginTop="70px" 
+        minWidth="70%"
+      >
+        <Card sx={{ width: 345, height: 460 }}> {/* Set the height here */}
+          <CardMedia sx={{ height: 200 }} image={charImage} title="lizard" />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {charName}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {charDescription}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small" onClick={removeChar}>
+              Change
+            </Button>
+          </CardActions>
+        </Card>
       </Box>
     );
   }

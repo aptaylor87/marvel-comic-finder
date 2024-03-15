@@ -24,28 +24,28 @@ function Home() {
       flexDirection="column"
       alignItems="center"
       margin="auto"
-      marginTop="15px"
+      marginTop="50px"
       minWidth="70%"
+      sx={{ textAlign: 'center' }}
     >
-      <Typography variant="h5">Marvel Comic finder</Typography>
-
-      <Typography variant="body1">
+      <Typography variant="h3" marginBottom="20px">Marvel Comic Finder</Typography> {/* Added marginBottom */}
+      <Typography variant="body1" marginBottom="20px"> {/* Added marginBottom */}
         Welcome! Navigate to the search function in the upper navigation to see
         what this application is all about. You'll be able to pick two
         characters from Marvel comics and see a list of all comics featuring
         both. Create an account to add comics to your own reading list.
       </Typography>
       {currentUser ? (
-        <Typography variant="body1">
-          Welcome back {currentUser.username}
+        <Typography variant="body1" marginBottom="20px"> {/* Added marginBottom */}
+          Welcome back {currentUser.username}!
         </Typography>
       ) : (
-        <Box display="flex">
+        <Box display="flex" flexDirection="row" marginTop="30px">
           <Button
             component={Link}
             to="/login"
             variant="contained"
-            style={{marginRight: "8px"}}
+            style={{ marginRight: "8px" }}
           >
             Login
           </Button>

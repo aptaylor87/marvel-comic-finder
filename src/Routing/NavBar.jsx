@@ -16,8 +16,8 @@ import Button from "@mui/material/Button";
  * Rendered by App.
  */
 
-function NavBar({logout}) {
-  const {currentUser} = useContext(UserContext);
+function NavBar({ logout }) {
+  const { currentUser } = useContext(UserContext);
 
   function loggedInNav() {
     return (
@@ -54,7 +54,7 @@ function NavBar({logout}) {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
+        <Typography variant="h6" component={RouterLink} to="/" sx={{ flexGrow: 1, textDecoration: 'none' }} color="inherit">
           Marvel Comic Finder
         </Typography>
 

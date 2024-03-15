@@ -46,22 +46,45 @@ function Search() {
   if (!characters || !options) return <CircularProgress />
 
   function showButton() {
-    let link = `/comics/search/${searchCharOne}/${searchCharTwo}/0`
+    let link = `/comics/search/${searchCharOne}/${searchCharTwo}/0`;
     return (
-      <Link to={link}>
-      <Button type="submit" variant="contained">
-        Run Search
-      </Button>
-    </Link>
-    )
+      <Box marginTop={2}>
+        <Link to={link}>
+          <Button type="submit" variant="contained">
+            Run Search
+          </Button>
+        </Link>
+      </Box>
+    );
   }
 
   return (
     <Container maxWidth="lg">
-      <CharacterCard options={options} character={searchCharOne} setChar={setSearchCharOne} characters={characters} />
-      <CharacterCard options={options} character={searchCharTwo} setChar={setSearchCharTwo} characters={characters} />
-      {searchCharOne && searchCharTwo ? showButton() : null}
-
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        marginTop="50px"
+      >
+        <Typography variant="h3" marginBottom="20px">
+          Select two characters to run a search!
+        </Typography>
+        <Box display="flex" flexDirection="row" justifyContent="center">
+          <CharacterCard
+            options={options}
+            character={searchCharOne}
+            setChar={setSearchCharOne}
+            characters={characters}
+          />
+          <CharacterCard
+            options={options}
+            character={searchCharTwo}
+            setChar={setSearchCharTwo}
+            characters={characters}
+          />
+        </Box>
+        {searchCharOne && searchCharTwo ? showButton() : null}
+      </Box>
     </Container>
   );
 }
